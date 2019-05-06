@@ -2,10 +2,6 @@ import plotly
 import plotly.graph_objs as go
 import numpy as np
 
-# N = 1000
-# random_x = np.random.randn(N)
-# random_y = np.random.randn(N)
-
 xdata = np.linspace(-10, 10, 101)
 ydata = np.cos(xdata)
 
@@ -69,5 +65,4 @@ config = {
     'editable': True
 }
 
-# plotly.offline.plot(data, config=config, filename='basic-scatter.html', auto_open=False)
 plotly.offline.plot(dict(data=data,layout=layout), config=config, filename='simple-plots.html', auto_open=True)
